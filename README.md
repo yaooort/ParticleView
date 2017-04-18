@@ -1,5 +1,6 @@
 # ParticleView
 ### 星空效果
+[![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 ### 效果图
 ![](https://github.com/yaooort/ParticleView/blob/master/img/see.gif)
