@@ -36,6 +36,11 @@ public class Flake {
         this.startPoint = startPoint;
     }
 
+    private int randomColor(int alpha) {
+        Random rnd = new Random();
+        alpha = Math.min(Math.max(1, alpha), 255);
+        return Color.argb(alpha, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+    }
 
     /**
      * 构造一个粒子
@@ -72,27 +77,28 @@ public class Flake {
         Random random = new Random();
         int width = canvas.getWidth();
         int height = canvas.getHeight();
-        int spx = random.nextInt(speedMax * 2) - speedMax;
-        float x1 = startPoint.x;
-        float y1 = startPoint.y - 1;
+        int er = random.nextInt(2);
+        float x1 = startPoint.x + (er == 0 ? -0 : +0);
+        float y1 = startPoint.y - 3;
         if (y1 < -h_fl) {
             y1 = height + h_fl;
             x1 = random.nextInt(width);
         }
-//        if (x1 > width) {
-//            x1 -= spx;
-//        }
-//        if (x1 < -w_fl) {
-//            x1 += spx;
-//        }
-        int co = random.nextInt(3);
-        if (co == 0) {
-            mPaint.setColor(Color.YELLOW);
-        } else if (co == 1) {
-            mPaint.setColor(Color.WHITE);
-        } else if (co == 2) {
-            mPaint.setColor(Color.GREEN);
+        if (x1 > width) {
+            x1 -= 10;
         }
+        if (x1 < -w_fl) {
+            x1 += 10;
+        }
+        mPaint.setColor(randomColor(220));
+//        int co = random.nextInt(3);
+//        if (co == 0) {
+//            mPaint.setColor(Color.YELLOW);
+//        } else if (co == 1) {
+//            mPaint.setColor(Color.WHITE);
+//        } else if (co == 2) {
+//            mPaint.setColor(Color.GREEN);
+//        }
         startPoint.set(x1, y1);
         canvas.drawCircle(startPoint.x, startPoint.y, w_fl / 2, mPaint);
     }
