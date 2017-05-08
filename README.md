@@ -39,7 +39,7 @@
 ```
 
 ### ios效果图
-![](https://github.com/yaooort/ParticleView/blob/master/IOS/img/ios.gif)
+![](https://github.com/yaooort/ParticleView/blob/master/IOS/img/iphone.gif)
 
 > ios两种方式，使用layer性能好很多内存维持在14M左右，使用View内存70M
 
