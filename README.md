@@ -3,7 +3,7 @@
 [![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 ### Android效果图
-![](https://github.com/yaooort/ParticleView/tree/master/Android/img/see.gif)
+![](https://github.com/yaooort/ParticleView/blob/master/Android/img/see.gif)
 
 > 如果需要其他类似效果修改这个方法即可高度自定义，匆匆忙忙没有封装，觉得封装意义不大
 
